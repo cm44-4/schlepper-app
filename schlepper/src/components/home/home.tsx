@@ -10,7 +10,8 @@ import './home.css';
 import Profile from '../profile/profile';
 import UserTrades from '../trades/user-trades/user-trades';
 import { useAppSelector } from '../../redux/hooks';
-import React from 'react';
+import * as React from 'react';
+import MapBox from '../Map/Mapdisplay';
 
 //the main component that's displayed after logging in.
 const Home: React.FC = () => {
@@ -31,6 +32,7 @@ const Home: React.FC = () => {
         <Route path='/user' element={<Profile username={viewedUser} />} />
         <Route path='/newMessage' element={<NewMessage />} />
         <Route path='reply' element={<Reply />} />
+        <Route path='/map' element={<MapBox />} />
       </Routes>
     </Router>
   );
